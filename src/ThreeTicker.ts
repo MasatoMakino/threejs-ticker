@@ -39,13 +39,13 @@ export class ThreeTicker {
     const delta = timestamp - ThreeTicker._lastUpdateTimestamp;
 
     ThreeTicker._dispatcher.dispatchEvent(
-      new ThreeTickerEvent(ThreeTickerEventType.onBeforeTick, delta)
+      new ThreeTickerEvent(ThreeTickerEventType.onBeforeTick, timestamp, delta)
     );
     ThreeTicker._dispatcher.dispatchEvent(
-      new ThreeTickerEvent(ThreeTickerEventType.tick, delta)
+      new ThreeTickerEvent(ThreeTickerEventType.tick, timestamp, delta)
     );
     ThreeTicker._dispatcher.dispatchEvent(
-      new ThreeTickerEvent(ThreeTickerEventType.onAfterTick, delta)
+      new ThreeTickerEvent(ThreeTickerEventType.onAfterTick, timestamp, delta)
     );
 
     ThreeTicker._lastUpdateTimestamp = timestamp;

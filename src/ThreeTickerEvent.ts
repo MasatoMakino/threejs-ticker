@@ -7,8 +7,10 @@ export enum ThreeTickerEventType {
 export class ThreeTickerEvent {
   public type: ThreeTickerEventType;
   public delta: number;
-  constructor(type: ThreeTickerEventType, delta: number) {
+  public timestamp: number;
+  constructor(type: ThreeTickerEventType, timestamp: number, delta: number) {
     this.type = type;
+    this.timestamp = timestamp;
     this.delta = delta;
   }
 }

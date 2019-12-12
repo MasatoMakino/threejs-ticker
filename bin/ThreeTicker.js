@@ -1,7 +1,11 @@
 import { EventDispatcher } from "three";
 import { ThreeTickerEvent, ThreeTickerEventType } from "./ThreeTickerEvent";
+/**
+ * @deprecated ThreeTicker is deprecated. Please migrate to RAF-ticker https://github.com/MasatoMakino/raf-ticker
+ */
 export class ThreeTicker {
     static initialize() {
+        console.warn("deprecated : ThreeTicker is deprecated. Please migrate to RAF-ticker https://github.com/MasatoMakino/raf-ticker");
         this._dispatcher = new EventDispatcher();
         ThreeTicker.onTick(performance.now());
     }

@@ -1,4 +1,7 @@
 import { Event } from "three";
+/**
+ * @deprecated ThreeTicker is deprecated. Please migrate to RAF-ticker https://github.com/MasatoMakino/raf-ticker
+ */
 export declare class ThreeTicker {
     private static _dispatcher;
     private static _lastUpdateTimestamp;
